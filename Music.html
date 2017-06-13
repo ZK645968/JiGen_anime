@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>音乐区</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/Music_.css">
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		body{
+			font-size: 11px;}
+		#preview {
+			border:	solid thin silver;
+			padding:2em;
+			text-align:	center;
+			box-shadow:	0 0 2em silver;
+			padding-bottom: 100px;
+		}
+		#preview-coverflow .cover {
+			cursor:		pointer;
+			width:		320px;
+			height:		240px;
+			box-shadow:	0 0 4em 1em white;
+		}
+	</style>
+</head>
+<body>
+
+<!--顶部-->
+<div class="top">
+	<div class="yidenglu">
+		<div class="top_touxiang"><a href=""><img  src="img/头像.png" alt="" id=""></a></div>
+		<h4 class="yonghuming"></h4>
+		<!-- 用图片代替 -->
+		<ul>
+			<li><a href="Personal/geren_moban.html">个人中心</a></li>
+			<li><a href="">退出登录</a></li>
+		</ul>
+	</div>
+	<div class="login">
+		<a href="Login/entry.html"><input type="button" id="btn_login" value="登录" /></a>
+		<a href="Login/register.html"><input type="button" id="btn_sign" value="注册"/></a>
+	</div>
+	<div id="drag" class="drag">
+		<div class="drag_color">
+		</div>
+	</div>
+	<div class="logo"><img src="img/logo.png" alt=""></div>
+</div>
+
+<div class="wrap">
+	<div class="nav">
+		<ul class="navlist">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="Music.html">音乐</a></li>
+			<li><a href="Image.html">图片</a></li>
+		</ul>
+		<div class="search_box">
+		<form class="search-form" action="" target="_blank">
+	 		<input type="text" class="search-text" name="####"/>
+	 		<input type="submit" class="search-button" value=""/>
+	 	</form>
+		</div>
+	</div>
+
+		<div class="htmleaf-content">
+			<div id="preview">
+				<div id="preview-coverflow">
+					<img class="cover" src="img/Music_img/attic.jpg"/>
+					<img class="cover" src="img/Music_img/aurora.jpg"/>
+					<img class="cover" src="img/Music_img/barbecue.jpg"/>
+					<img class="cover" src="img/Music_img/blackswan.jpg"/>
+					<img class="cover" src="img/Music_img/chess.jpg"/>
+					<img class="cover" src="img/Music_img/fire.jpg"/>
+					<img class="cover" src="img/Music_img/keyboard.jpg"/>
+					<img class="cover" src="img/Music_img/locomotive.jpg"/>
+					<img class="cover" src="img/Music_img/diveevo.jpg"/>
+					<img class="cover" src="img/Music_img/person.jpg"/>
+					<img class="cover" src="img/Music_img/rose.jpg"/>
+					<img class="cover" src="img/Music_img/seagull.jpg"/>
+					<img class="cover" src="img/Music_img/solarpower.jpg"/>
+				</div>
+			</div>
+		</div>
+	
+	<!-- jQuery/jQueryUI (hosted) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+	<!-- Plugin -->
+	<script src="js/jquery.coverflow.js"></script>
+	<!-- Optionals -->
+	<script src="js/jquery.interpolate.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/reflection.js"></script>
+
+
+	<script>
+		$(function() {
+			if ($.fn.reflect) {
+				$('#preview-coverflow .cover').reflect();	// only possible in very specific situations
+			}
+			$('#preview-coverflow').coverflow({
+				index:			6,
+				density:		2,
+				innerOffset:	50,
+				innerScale:		.7,
+				animateStep:	function(event, cover, offset, isVisible, isMiddle, sin, cos) {
+					if (isVisible) {
+						if (isMiddle) {
+							$(cover).css({
+								'filter':			'none',
+								'-webkit-filter':	'none'
+							});
+						} else {
+							var brightness	= 1 + Math.abs(sin),
+								contrast	= 1 - Math.abs(sin),
+								filter		= 'contrast('+contrast+') brightness('+brightness+')';
+							$(cover).css({
+								'filter':			filter,
+								'-webkit-filter':	filter
+							});
+						}
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>

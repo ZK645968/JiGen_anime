@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0 auto;padding: 0px;}
+a:hover{color:#2F4BF1;}
+#register_head{height:80px; background:#44BAE4;}/*网页头部*/
+#register_head h1{height:80px;color: white;font-size: 48px;font-family:华文彩云;text-align: center;line-height: 80px;}/*网页头部标语*/
+#register_total{width:1000px;}/*網頁中部*/
+#register_center{height:50%;width: 1000px;}
+#register_center div{float:left;}
+#register_center_logo{width:50%;height:50%;}/*网页LoGo*/
+#register_center table{width:35%;height: 50%; padding-top:100px;color:#44BAE4;font-family: 幼圆;font-size: 26px;line-height: 55px;margin: 0px;text-align: right;}/*网页表格部分*/
+#register_center input{ border-radius:6px;height: 26px;text-align: left;}/*右侧表单*/
+#register_but {width:30%;height: 80px;margin-left: 53%}/*表单下方按钮*/
+#register_but p{ width:500px;height: 80px; line-height: 80px;}
+#register_but span{float:left; font-size: 32px;font-family: 幼圆;color:#44BAE4;margin: 10px; font-weight:bold;font-style: italic;}
+.inp2{ background-color:#CCC; padding:3px; margin-left:10px;font-size: 16px; color: #000000;position: absolute;height:19px;line-height: 19px;}/*提示信息*/
+.error{ background:#CCC url(../img/login_img/error.gif) no-repeat; padding-left: 25px;margin-top: 19px;}/*正确提示信息*/
+.right{ background:#CCC url(../img/login_img/righta.gif) no-repeat; padding-left:25px;margin-top: 19px;}/*错误提示信息*/

@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0 auto;padding: 0px;}
+a{text-decoration: none;}
+a:link{color:#5E5D60;}
+a:hover{color:#2F4BF1;}
+#entry_head{height:80px; background:#44BAE4;}/*网页头部*/
+#entry_head h1{height:80px;color: white;font-size: 48px;font-family:华文彩云;text-align: center;line-height: 80px;}/*网页头部标语*/
+#entry_total{width:1000px;}/*網頁中部*/
+#entry_center{height:50%;width: 1000px;}
+#entry_center div{float:left;}
+#entry_center_logo{width:50%;height:50%;}/*网页LoGo*/
+#entry_center table{width:35%;height: 50%; padding-top:100px;color:#44BAE4;font-family: 幼圆;font-size: 26px;line-height:70px;margin: 0px;text-align: right;}/*网页表格部分*/
+#entry_center input{ border-radius:6px;height: 26px;text-align: left;}/*右侧表单*/
+#entry_center p{font-family: 幼圆;font-size: 18px;line-height:40px;margin-left: 68%;}
+#entry_but {width:30%;height: 80px;margin-left: 53%;}/*表单下方按钮*/
+#entry_but p{ width:500px;height: 80px; line-height: 80px;}
+#entry_but span{float:left; font-size: 32px;font-family: 幼圆;color:#44BAE4;margin: 10px; font-weight:bold;font-style: italic;}
